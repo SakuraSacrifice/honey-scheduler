@@ -1,0 +1,18 @@
+org:
+  quartz:
+    jobStore:
+      dataSource: qzDS
+    dataSource:
+      qzDS:
+        driver: com.mysql.cj.jdbc.Driver
+        URL: jdbc:mysql://localhost:3307/test
+        user: root
+        password: root
+    scheduler:
+      instanceName: local-demo
+
+test:
+  simple:
+    job:
+      repeat-interval: 10000
+      repeat-count: -1
